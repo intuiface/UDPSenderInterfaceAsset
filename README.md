@@ -1,2 +1,1 @@
-# UDPSenderInterfaceAsset
-Intuiface Interface Asset the enables to send commands over UDP
+# UDPSenderInterfaceAssetThis Intuiface Interface Asset the enables to send commands over UDP, either as string or HEX commands. You can use a software like [PacketSender](https://packetsender.com/) to test the commands. To use it, you need to: * set the address and port to which you want to send a commend in the properties* use one of the 2 actions to send a command. You can download a demo Intuiface experience in [the releases](https://github.com/intuiface/UDPSenderInterfaceAsset/releases).
