@@ -1,0 +1,7 @@
+C:\WorkGIT\GithubIntuiface\UDPSender\UDPSender\bin\Debug\UDPSender.dll
+C:\WorkGIT\GithubIntuiface\UDPSender\UDPSender\bin\Debug\UDPSender.pdb
+C:\WorkGIT\GithubIntuiface\UDPSender\UDPSender\obj\Debug\UDPSender.csprojResolveAssemblyReference.cache
+C:\WorkGIT\GithubIntuiface\UDPSender\UDPSender\obj\Debug\UDPSender.csproj.CoreCompileInputs.cache
+C:\WorkGIT\GithubIntuiface\UDPSender\UDPSender\obj\Debug\UDPSender.dll
+C:\WorkGIT\GithubIntuiface\UDPSender\UDPSender\obj\Debug\UDPSender.pdb
+C:\WorkGIT\GithubIntuiface\UDPSender\UDPSender\bin\Debug\UDPSender.ifd

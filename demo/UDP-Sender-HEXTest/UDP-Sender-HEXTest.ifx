@@ -1,0 +1,681 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Presentation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="http://schemas.intuilab.com/intuiface/api5/ip.xsd" Name="UDP-Sender-HEXTest" Templates="player://resources/418401b6-8f3b-4ebc-a8ea-a6d32480aa0f" Id="1-ee17d622-6d83-4a77-85a1-afdbaf36f99e" DataPath=".\Files" Language="" Width="1920" Height="1080" ShowLoadingIndicator="true" Platform="windows" ComposerVersion="6.4.1" ApiNumber="28" MinApiNumber="28" RequiredPlayerWindows="6.4.0" RequiredPlayerTablet="6.4.0" LastModificationDate="2019-08-22T19:53:55.9935995Z" SnapshotPath="player://data/Snapshots/default.png">
+  <ComposerExtensions>
+    <Extension Name="HasActionTargetTreeBeenManipulated" Value="true" />
+    <Extension Name="IsExpandedInTriggerActionsView" Value="True" />
+    <Extension Name="IsExpandedInBindingViews" Value="True" />
+  </ComposerExtensions>
+  <Properties>
+    <Property Type="Visual" Name="LoadingIndicatorStyle"><![CDATA[value:UniversalLoading]]></Property>
+    <Property Type="Visual" Name="NavigateWithKeyboardEnabled"><![CDATA[value:True]]></Property>
+  </Properties>
+  <Layers />
+  <Spaces>
+    <Space Name="Scene 1" AutoReset="true" BackgroundColor="#FFFFFFFF">
+      <ComposerExtensions>
+        <Extension Name="TranslateXOnScene" Value="-960" />
+        <Extension Name="TranslateYOnScene" Value="-540" />
+        <Extension Name="ViewPortXOnScene" Value="2021.05263157895" />
+        <Extension Name="ViewPortYOnScene" Value="1696.8500049373" />
+      </ComposerExtensions>
+      <Layer Name="Layer 1" Visual="Pinboard" LayerType="Default">
+        <ComposerExtensions>
+          <Extension Name="IsExpanded" Value="True" />
+          <Extension Name="IsExpandedInTriggerActionsView" Value="True" />
+          <Extension Name="IsExpandedInBindingViews" Value="True" />
+        </ComposerExtensions>
+        <Attachments>
+          <EventTrigger EventType="Container" EventName="ItemDropped">
+            <CreateAsset Delay="value:0.0" />
+          </EventTrigger>
+        </Attachments>
+        <Properties>
+          <Property Type="Visual" Name="ShowFeedback"><![CDATA[value:False]]></Property>
+          <Property Type="Visual" Name="ItemShadow"><![CDATA[value:NoShadow]]></Property>
+        </Properties>
+        <Asset Name="Send HEX" Visual="Button" Style="Simple button" Container="Static" Domain="value:VisibleTrigger">
+          <Attachments>
+            <EventTrigger EventType="Visual" EventName="Released">
+              <InvokeService Target="player://externals/UDPSender/" Type="Domain" Name="SendHexMessage" Delay="value:0">
+                <ServiceValueParameter ParamName="strMsg_" Value="player://visuals/UDP-Sender-HEXTest/Scene%201/Layer%201/Text%20Input/DomainComponent/Text" />
+              </InvokeService>
+            </EventTrigger>
+          </Attachments>
+          <Properties>
+            <Property Type="Visual" Name="Font">
+              <Typeface>
+                <Family>Segoe UI</Family>
+                <Stretch>normal</Stretch>
+                <Weight>400</Weight>
+                <Style>normal</Style>
+              </Typeface>
+            </Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:25]]></Property>
+            <Property Type="Visual" Name="Text"><![CDATA[value:Send HEX]]></Property>
+            <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Visual" Name="BackgroundColor"><![CDATA[value:#FFFAFAFA]]></Property>
+            <Property Type="Visual" Name="Radius"><![CDATA[value:10]]></Property>
+            <Property Type="Visual" Name="Flat"><![CDATA[value:True]]></Property>
+            <Property Type="Visual" Name="PressedVeilColor"><![CDATA[value:#80000000]]></Property>
+            <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF000000]]></Property>
+            <Property Type="Visual" Name="OutlineColor"><![CDATA[value:#FF2B2B2B]]></Property>
+            <Property Type="Visual" Name="LineWrap"><![CDATA[value:True]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:626]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:515]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:250]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:69]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="Text Input" Visual="Text input" Style="" Container="Static" ContainerStyle="" Domain="value:Text input">
+          <Attachments>
+            <EventTrigger EventType="Visual" EventName="EnterKeyPressed">
+              <InvokeService Target="player://visuals/UDP-Sender-HEXTest/Scene%201/Layer%201/Text%20Input/" Type="Visual" Name="StopEdition" Delay="value:0.0" />
+            </EventTrigger>
+          </Attachments>
+          <Properties>
+            <Property Type="Domain" Name="Text"><![CDATA[value:4172742D4E6574000099000E00006A6B0301]]></Property>
+            <Property Type="Visual" Name="Font">
+              <Typeface>
+                <Family>Segoe UI</Family>
+                <Stretch>normal</Stretch>
+                <Weight>400</Weight>
+                <Style>normal</Style>
+              </Typeface>
+            </Property>
+            <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF000000]]></Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:25]]></Property>
+            <Property Type="Visual" Name="InstructionFont">
+              <Typeface>
+                <Family>Segoe UI</Family>
+                <Stretch>normal</Stretch>
+                <Weight>400</Weight>
+                <Style>italic</Style>
+              </Typeface>
+            </Property>
+            <Property Type="Visual" Name="InstructionFontSize"><![CDATA[value:25]]></Property>
+            <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Visual" Name="Keyboard"><![CDATA[value:UNDEFINED]]></Property>
+            <Property Type="Visual" Name="BackgroundColor"><![CDATA[value:#FFBABABA]]></Property>
+            <Property Type="Visual" Name="EditionBackgroundColor"><![CDATA[value:#FFCFCFCF]]></Property>
+            <Property Type="Visual" Name="InstructionFontColor"><![CDATA[value:#FF848484]]></Property>
+            <Property Type="Visual" Name="InstructionItalic"><![CDATA[value:True]]></Property>
+            <Property Type="Visual" Name="SelectionAreaColor"><![CDATA[value:#FF595959]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:881]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:410]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:759]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:65]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="HEX string (no blank" Visual="DefaultText" Style="" Container="Static" ContainerStyle="" Domain="value:Text">
+          <Properties>
+            <Property Type="Domain" Name="Text"><![CDATA[value:HEX string (no blanks required)]]></Property>
+            <Property Type="Visual" Name="Font">
+              <Typeface>
+                <Family>Segoe UI</Family>
+                <Stretch>normal</Stretch>
+                <Weight>400</Weight>
+                <Style>normal</Style>
+              </Typeface>
+            </Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:25]]></Property>
+            <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF262626]]></Property>
+            <Property Type="Visual" Name="VerticalAlignment"><![CDATA[value:Center]]></Property>
+            <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:287]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:410]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:370]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:65]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="Address:" Visual="DefaultText" Style="" Container="Static" ContainerStyle="" Domain="value:Text">
+          <Properties>
+            <Property Type="Domain" Name="Text"><![CDATA[value:Address: ]]></Property>
+            <Property Type="Visual" Name="Font">
+              <Typeface>
+                <Family>Segoe UI</Family>
+                <Stretch>normal</Stretch>
+                <Weight>400</Weight>
+                <Style>normal</Style>
+              </Typeface>
+            </Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:25]]></Property>
+            <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF262626]]></Property>
+            <Property Type="Visual" Name="VerticalAlignment"><![CDATA[value:Center]]></Property>
+            <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:287]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:107]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:370]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:65]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="Port:" Visual="DefaultText" Style="" Container="Static" ContainerStyle="" Domain="value:Text">
+          <Properties>
+            <Property Type="Domain" Name="Text"><![CDATA[value:Port: ]]></Property>
+            <Property Type="Visual" Name="Font">
+              <Typeface>
+                <Family>Segoe UI</Family>
+                <Stretch>normal</Stretch>
+                <Weight>400</Weight>
+                <Style>normal</Style>
+              </Typeface>
+            </Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:25]]></Property>
+            <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF262626]]></Property>
+            <Property Type="Visual" Name="VerticalAlignment"><![CDATA[value:Center]]></Property>
+            <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:287]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:172]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:370]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:65]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="Address: 1" Visual="DefaultText" Style="" Container="Static" ContainerStyle="" Domain="value:Text">
+          <Properties>
+            <Property Type="Domain" Name="Text"><![CDATA[player://externals/UDPSender/Address]]></Property>
+            <Property Type="Visual" Name="Font">
+              <Typeface>
+                <Family>Segoe UI</Family>
+                <Stretch>normal</Stretch>
+                <Weight>400</Weight>
+                <Style>normal</Style>
+              </Typeface>
+            </Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:25]]></Property>
+            <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF262626]]></Property>
+            <Property Type="Visual" Name="VerticalAlignment"><![CDATA[value:Center]]></Property>
+            <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:414]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:107]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:370]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:65]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="Port: 1" Visual="DefaultText" Style="" Container="Static" ContainerStyle="" Domain="value:Text">
+          <Properties>
+            <Property Type="Domain" Name="Text"><![CDATA[player://externals/UDPSender/Port]]></Property>
+            <Property Type="Visual" Name="Font">
+              <Typeface>
+                <Family>Segoe UI</Family>
+                <Stretch>normal</Stretch>
+                <Weight>400</Weight>
+                <Style>normal</Style>
+              </Typeface>
+            </Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:25]]></Property>
+            <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF262626]]></Property>
+            <Property Type="Visual" Name="VerticalAlignment"><![CDATA[value:Center]]></Property>
+            <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:414]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:172]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:370]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:65]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+      </Layer>
+    </Space>
+  </Spaces>
+  <SharedContracts />
+  <Converters />
+  <ExternalAssets>
+    <ExternalAsset Name="UDPSender" DescriptorPath="player://resources/e343f42f-e265-4ac8-bd9c-cb6d065a0e6e" ExternalAssetName="UDPSender">
+      <Properties>
+        <Property Type="Domain" Name="Port"><![CDATA[value:62185]]></Property>
+      </Properties>
+    </ExternalAsset>
+  </ExternalAssets>
+  <Resources>
+    <Resource Key="418401b6-8f3b-4ebc-a8ea-a6d32480aa0f" Type="style" DefaultValue="value:IntuiFace White Style">
+      <Templates>
+        <AssetTemplate Propagate="true">
+          <Conditions />
+          <Property Type="Container" Name="DisplayButtonsFillColor"><![CDATA[value:#FFFAFAFA]]></Property>
+          <Property Type="Container" Name="DisplayButtonsOutlineColor"><![CDATA[value:#FFB2B2B2]]></Property>
+          <Property Type="Container" Name="DisplayButtonsRadius"><![CDATA[value:20]]></Property>
+          <Property Type="Container" Name="DisplayButtonsFlat"><![CDATA[value:True]]></Property>
+          <Property Type="Container" Name="DisplayButtonsShadow"><![CDATA[value:False]]></Property>
+          <Property Type="Container" Name="DisplayButtonsPressedColor"><![CDATA[value:#33000000]]></Property>
+          <Property Type="Container" Name="DisplayButtonsCheckedColor"><![CDATA[value:#00000000]]></Property>
+          <Property Type="Container" Name="CloseButtonIcon"><![CDATA[player://resources/addf0ae6-ccfa-4948-90ba-0d840081f3f2]]></Property>
+          <Property Type="Container" Name="MinimizeButtonIcon"><![CDATA[player://resources/03918373-8c3c-4b55-a14a-e31a3e63f2bf]]></Property>
+          <Property Type="Container" Name="MaximizeButtonIcon"><![CDATA[player://resources/82def5c0-afdc-4bbd-b52a-1834a34a9018]]></Property>
+          <Property Type="Container" Name="UnmaximizeButtonIcon"><![CDATA[player://resources/038794a9-ec80-4819-ab0d-d9eba20f47c9]]></Property>
+          <Property Type="Container" Name="PinButtonIcon"><![CDATA[player://resources/f03c1c0e-cbd7-4265-85f5-5611756d0ef3]]></Property>
+          <Property Type="Container" Name="UnpinButtonIcon"><![CDATA[player://resources/6a24bcbd-ee6a-4ea1-b743-4664a6d977f1]]></Property>
+          <Property Type="Visual" Name="ToolButtonsFillColor"><![CDATA[value:#FFFAFAFA]]></Property>
+          <Property Type="Visual" Name="ToolButtonsOutlineColor"><![CDATA[value:#FFB2B2B2]]></Property>
+          <Property Type="Visual" Name="ToolButtonsRadius"><![CDATA[value:5]]></Property>
+          <Property Type="Visual" Name="ToolButtonsFlat"><![CDATA[value:True]]></Property>
+          <Property Type="Visual" Name="ToolButtonsShadow"><![CDATA[value:False]]></Property>
+          <Property Type="Visual" Name="ToolButtonsPressedColor"><![CDATA[value:#33000000]]></Property>
+          <Property Type="Visual" Name="ToolButtonsActivatedColor"><![CDATA[value:#E61A1A1A]]></Property>
+          <Property Type="Visual" Name="ExportButtonIcon"><![CDATA[player://resources/aa713f11-2976-4ffa-94f1-79d8e3d47ba5]]></Property>
+          <Property Type="Visual" Name="ExportButtonIconSelected"><![CDATA[player://resources/6b989fb1-97ec-4fb5-95ac-411eba9f55ba]]></Property>
+          <Property Type="Visual" Name="DrawingToolsIcon"><![CDATA[player://resources/960e08b3-8ac3-4eff-b99f-eeaaa92d1008]]></Property>
+          <Property Type="Visual" Name="DrawingToolsIconActivated"><![CDATA[player://resources/7bf38286-9737-4f89-97f1-7a251e3b3831]]></Property>
+          <Property Type="Visual" Name="AnnotationPenIcon"><![CDATA[player://resources/bca6e6a3-5945-4eb2-bda3-c06c72fd8a87]]></Property>
+          <Property Type="Visual" Name="AnnotationPenIconSelected"><![CDATA[player://resources/0aea46af-9437-488f-9e13-291a521d8d77]]></Property>
+          <Property Type="Visual" Name="AnnotationHighlighterIcon"><![CDATA[player://resources/7cedfac9-a1ad-41e0-b54e-af3d5611bf4f]]></Property>
+          <Property Type="Visual" Name="AnnotationHighlighterIconSelected"><![CDATA[player://resources/ec05d834-4a66-4f38-b74d-056be66c478b]]></Property>
+          <Property Type="Visual" Name="AnnotationBrushLightIcon"><![CDATA[player://resources/4fac5d71-a9ed-42e9-98d6-72c7b6104dc7]]></Property>
+          <Property Type="Visual" Name="AnnotationBrushLightIconSelected"><![CDATA[player://resources/02584d08-a1e1-43c3-adae-1d52a7a3e73e]]></Property>
+          <Property Type="Visual" Name="AnnotationBrushLargeIcon"><![CDATA[player://resources/05ac8014-5fa4-4ab1-9bb0-e1314901ac83]]></Property>
+          <Property Type="Visual" Name="AnnotationBrushLargeIconSelected"><![CDATA[player://resources/44f5d3b3-b5af-49a3-924f-282196f6110c]]></Property>
+          <Property Type="Visual" Name="AnnotationEraserIcon"><![CDATA[player://resources/f137ea31-fcb2-44b3-9804-0faf3d5ad12d]]></Property>
+          <Property Type="Visual" Name="AnnotationEraserIconSelected"><![CDATA[player://resources/86600d57-cb7d-403f-bc94-0d8495dab4ee]]></Property>
+          <Property Type="Visual" Name="AnnotationEraserSmallIcon"><![CDATA[player://resources/0199c133-76d9-4b1b-9ae0-484df49bbf21]]></Property>
+          <Property Type="Visual" Name="AnnotationEraserSmallIconSelected"><![CDATA[player://resources/fa60f508-f68d-4c77-b373-6935767ca537]]></Property>
+          <Property Type="Visual" Name="AnnotationEraserMediumIcon"><![CDATA[player://resources/bc49918c-4221-44a2-b89f-cfa44525a579]]></Property>
+          <Property Type="Visual" Name="AnnotationEraserMediumIconSelected"><![CDATA[player://resources/321f5482-0158-457e-81ba-16fef09255eb]]></Property>
+          <Property Type="Visual" Name="AnnotationEraserLargeIcon"><![CDATA[player://resources/fb3bf3e4-204e-4682-af35-48bd06675c51]]></Property>
+          <Property Type="Visual" Name="AnnotationEraserLargeIconSelected"><![CDATA[player://resources/379f1151-2084-4ad6-8928-928a9ba989dd]]></Property>
+          <Property Type="Visual" Name="AnnotationEraserStrokeIcon"><![CDATA[player://resources/242b73f8-a6f8-4609-aa33-538d5822012c]]></Property>
+          <Property Type="Visual" Name="AnnotationEraserStrokeIconSelected"><![CDATA[player://resources/fdabddea-f9a1-43a1-9dc5-532463b8837f]]></Property>
+          <Property Type="Visual" Name="AnnotationBrushFeltIcon"><![CDATA[player://resources/e385315f-540d-46b1-901f-a719ee8089aa]]></Property>
+          <Property Type="Visual" Name="AnnotationBrushFeltIconSelected"><![CDATA[player://resources/356b274a-5627-4fee-b7bf-1ae6068c074d]]></Property>
+          <Property Type="Visual" Name="AnnotationRedoIcon"><![CDATA[player://resources/0d8747dd-3534-4698-b2cd-20aa398b215f]]></Property>
+          <Property Type="Visual" Name="AnnotationRedoIconPressed"><![CDATA[player://resources/91909a53-9b33-4cdc-ad84-c6625c0b80f4]]></Property>
+          <Property Type="Visual" Name="AnnotationUndoIcon"><![CDATA[player://resources/02c3759a-8904-44c6-a79e-784a819bdcdd]]></Property>
+          <Property Type="Visual" Name="AnnotationUndoIconPressed"><![CDATA[player://resources/d7aa849a-9c76-4ca3-897f-b1598f1b4dac]]></Property>
+          <Property Type="Visual" Name="AnnotationWipeIcon"><![CDATA[player://resources/4637be15-ad0a-4df8-8f9b-1cc4c4de28f0]]></Property>
+          <Property Type="Visual" Name="AnnotationTakeSnapshotIcon"><![CDATA[player://resources/6bc78bd7-3367-43fa-9600-b967ddd12448]]></Property>
+          <Property Type="Visual" Name="ControlsFillColor"><![CDATA[value:#FFFAFAFA]]></Property>
+          <Property Type="Visual" Name="ControlsOutlineColor"><![CDATA[value:#FFB2B2B2]]></Property>
+          <Property Type="Visual" Name="ControlsRadius"><![CDATA[value:5]]></Property>
+          <Property Type="Visual" Name="ControlsFlat"><![CDATA[value:True]]></Property>
+          <Property Type="Visual" Name="ControlsShadow"><![CDATA[value:False]]></Property>
+          <Property Type="Visual" Name="TrackingBarFontColor"><![CDATA[value:#FF333333]]></Property>
+          <Property Type="Visual" Name="RewindButtonIcon"><![CDATA[player://resources/adc2b8d1-49ea-4aab-a59a-07a5b549b149]]></Property>
+          <Property Type="Visual" Name="PlayButtonIcon"><![CDATA[player://resources/69aba549-de3c-47d2-9af2-2d5566f9e483]]></Property>
+          <Property Type="Visual" Name="PauseButtonIcon"><![CDATA[player://resources/2ca20b02-a1c0-4c06-a3d5-95b8147d67de]]></Property>
+          <Property Type="Visual" Name="MuteIcon"><![CDATA[player://resources/0ca71444-ea31-4d86-aacc-a4b02d97a842]]></Property>
+          <Property Type="Visual" Name="VolumeLevel1Icon"><![CDATA[player://resources/68b316d8-6dc8-4e26-a9bf-633fee36830f]]></Property>
+          <Property Type="Visual" Name="VolumeLevel2Icon"><![CDATA[player://resources/ccfa2f4c-bff4-4232-b574-5229e84c0353]]></Property>
+          <Property Type="Visual" Name="VolumeLevel3Icon"><![CDATA[player://resources/480d4a10-6c11-4e3b-850f-a3a9316b1bc2]]></Property>
+          <Property Type="Visual" Name="KeyboardButtonIcon"><![CDATA[player://resources/36bd63b2-4767-45d7-b799-134519f229df]]></Property>
+          <Property Type="Visual" Name="RefreshButtonIcon"><![CDATA[player://resources/7b555203-16e2-4ded-b2d2-bc83cc79aa48]]></Property>
+          <Property Type="Visual" Name="StopLoadingButtonIcon"><![CDATA[player://resources/f8d2a822-e52a-46a6-895b-be8b8cda2f2c]]></Property>
+          <Property Type="Visual" Name="NavigationIcon"><![CDATA[player://resources/0b54df74-1e2f-4369-b4b7-35242b14f56c]]></Property>
+          <Property Type="Visual" Name="ResetButtonIcon"><![CDATA[player://resources/d8012435-1237-4717-b366-74eb04a4d5a6]]></Property>
+        </AssetTemplate>
+      </Templates>
+    </Resource>
+    <Resource Key="addf0ae6-ccfa-4948-90ba-0d840081f3f2" Type="uri" Length="475" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Close-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="03918373-8c3c-4b55-a14a-e31a3e63f2bf" Type="uri" Length="190" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Minimize-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="82def5c0-afdc-4bbd-b52a-1834a34a9018" Type="uri" Length="305" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Maximize-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="038794a9-ec80-4819-ab0d-d9eba20f47c9" Type="uri" Length="309" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Unmaximize-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="f03c1c0e-cbd7-4265-85f5-5611756d0ef3" Type="uri" Length="548" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Pin-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="6a24bcbd-ee6a-4ea1-b743-4664a6d977f1" Type="uri" Length="496" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Unpin-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="aa713f11-2976-4ffa-94f1-79d8e3d47ba5" Type="uri" Length="481" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Export-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="6b989fb1-97ec-4fb5-95ac-411eba9f55ba" Type="uri" Length="463" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Selected-export-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="960e08b3-8ac3-4eff-b99f-eeaaa92d1008" Type="uri" Length="869" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Drawing-tools-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="7bf38286-9737-4f89-97f1-7a251e3b3831" Type="uri" Length="864" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Selected-drawing-tools-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="bca6e6a3-5945-4eb2-bda3-c06c72fd8a87" Type="uri" Length="664" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Pen-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="0aea46af-9437-488f-9e13-291a521d8d77" Type="uri" Length="1036" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Selected-pen-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="7cedfac9-a1ad-41e0-b54e-af3d5611bf4f" Type="uri" Length="955" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Highlighter-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="ec05d834-4a66-4f38-b74d-056be66c478b" Type="uri" Length="1252" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Selected-highlighter-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="4fac5d71-a9ed-42e9-98d6-72c7b6104dc7" Type="uri" Length="936" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Light-brush-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="02584d08-a1e1-43c3-adae-1d52a7a3e73e" Type="uri" Length="1158" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Selected-light-brush-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="05ac8014-5fa4-4ab1-9bb0-e1314901ac83" Type="uri" Length="1032" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Large-brush-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="44f5d3b3-b5af-49a3-924f-282196f6110c" Type="uri" Length="1299" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Selected-large-brush-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="f137ea31-fcb2-44b3-9804-0faf3d5ad12d" Type="uri" Length="723" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Eraser-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="86600d57-cb7d-403f-bc94-0d8495dab4ee" Type="uri" Length="1116" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Selected-Eraser-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="4637be15-ad0a-4df8-8f9b-1cc4c4de28f0" Type="uri" Length="1450" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Clear-all-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="6bc78bd7-3367-43fa-9600-b967ddd12448" Type="uri" Length="1088" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Snapshot-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="adc2b8d1-49ea-4aab-a59a-07a5b549b149" Type="uri" Length="458" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Rewind-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="69aba549-de3c-47d2-9af2-2d5566f9e483" Type="uri" Length="391" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Play-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="2ca20b02-a1c0-4c06-a3d5-95b8147d67de" Type="uri" Length="259" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Pause-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="0ca71444-ea31-4d86-aacc-a4b02d97a842" Type="uri" Length="429" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Mute-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="68b316d8-6dc8-4e26-a9bf-633fee36830f" Type="uri" Length="471" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Volume-level-1-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="ccfa2f4c-bff4-4232-b574-5229e84c0353" Type="uri" Length="556" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Volume-level-2-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="480d4a10-6c11-4e3b-850f-a3a9316b1bc2" Type="uri" Length="682" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Volume-level-3-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="36bd63b2-4767-45d7-b799-134519f229df" Type="uri" Length="248" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Keyboard-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="7b555203-16e2-4ded-b2d2-bc83cc79aa48" Type="uri" Length="638" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Refresh-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="f8d2a822-e52a-46a6-895b-be8b8cda2f2c" Type="uri" Length="475" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Stop-loading-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="0b54df74-1e2f-4369-b4b7-35242b14f56c" Type="uri" Length="314" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Navigation-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="d8012435-1237-4717-b366-74eb04a4d5a6" Type="uri" Length="622" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Reset-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="0199c133-76d9-4b1b-9ae0-484df49bbf21" Type="uri" Length="675" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Erase_small-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="fa60f508-f68d-4c77-b373-6935767ca537" Type="uri" Length="1014" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Selected-Erase_small-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="bc49918c-4221-44a2-b89f-cfa44525a579" Type="uri" Length="733" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Erase_medium-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="321f5482-0158-457e-81ba-16fef09255eb" Type="uri" Length="1137" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Selected-Erase_medium-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="fb3bf3e4-204e-4682-af35-48bd06675c51" Type="uri" Length="801" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Erase_large-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="379f1151-2084-4ad6-8928-928a9ba989dd" Type="uri" Length="1295" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Selected-Erase_large-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="242b73f8-a6f8-4609-aa33-538d5822012c" Type="uri" Length="907" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/EraserStroke-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="fdabddea-f9a1-43a1-9dc5-532463b8837f" Type="uri" Length="1414" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Selected-EraserStroke-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="e385315f-540d-46b1-901f-a719ee8089aa" Type="uri" Length="690" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Felt-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="356b274a-5627-4fee-b7bf-1ae6068c074d" Type="uri" Length="998" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Selected-Felt-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="0d8747dd-3534-4698-b2cd-20aa398b215f" Type="uri" Length="650" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Redo-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="91909a53-9b33-4cdc-ad84-c6625c0b80f4" Type="uri" Length="663" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Pressed-Redo-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="02c3759a-8904-44c6-a79e-784a819bdcdd" Type="uri" Length="626" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Undo-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="d7aa849a-9c76-4ca3-897f-b1598f1b4dac" Type="uri" Length="689" LastModificationDate="2019-07-22T15:34:42Z" Archive="SmallFiles.zip" DefaultValue="player://data/Icons/Pressed-Undo-icon-IntuiFace-White.png">
+      <Infos>
+        <Tags>icon</Tags>
+      </Infos>
+    </Resource>
+    <Resource Key="e343f42f-e265-4ac8-bd9c-cb6d065a0e6e" Type="uri" Length="4534" LastModificationDate="2019-08-22T19:20:20.7213732Z" DefaultValue="player://data/InterfaceAssets/UDPSender/UDPSender.ifd">
+      <Dependencies>
+        <Dependency URI="player://data/InterfaceAssets/UDPSender/UDPSender.dll" Length="6656" LastModificationDate="2019-08-22T19:21:11.7997044Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/UDPSender/UDPSender.pdb" Length="15872" LastModificationDate="2019-08-22T19:21:11.7997044Z" Archive="SmallFiles.zip" />
+      </Dependencies>
+    </Resource>
+    <Resource Key="6943eaa7-7663-4caf-b0b3-e266a2386112" Type="font" DefaultValue="value:Segoe UI">
+      <Dependencies>
+        <Dependency URI="player://data/Contents/SEGOEUIL.iff" Length="913712" LastModificationDate="2019-03-19T04:44:11.4382732Z">
+          <Infos>
+            <FontStyle>normal</FontStyle>
+            <FontWeight>300</FontWeight>
+            <FontStretch>normal</FontStretch>
+          </Infos>
+        </Dependency>
+        <Dependency URI="player://data/Contents/SEGUILI.iff" Length="459940" LastModificationDate="2019-03-19T04:44:18.6107231Z">
+          <Infos>
+            <FontStyle>italic</FontStyle>
+            <FontWeight>300</FontWeight>
+            <FontStretch>normal</FontStretch>
+          </Infos>
+        </Dependency>
+        <Dependency URI="player://data/Contents/SEGOEUISL.iff" Length="854140" LastModificationDate="2019-03-19T04:44:11.4382732Z">
+          <Infos>
+            <FontStyle>normal</FontStyle>
+            <FontWeight>350</FontWeight>
+            <FontStretch>normal</FontStretch>
+          </Infos>
+        </Dependency>
+        <Dependency URI="player://data/Contents/SEGUISLI.iff" Length="467180" LastModificationDate="2019-03-19T04:44:18.6107231Z">
+          <Infos>
+            <FontStyle>italic</FontStyle>
+            <FontWeight>350</FontWeight>
+            <FontStretch>normal</FontStretch>
+          </Infos>
+        </Dependency>
+        <Dependency URI="player://data/Contents/SEGOEUI.iff" Length="955804" LastModificationDate="2019-03-19T04:44:11.4695257Z">
+          <Infos>
+            <FontStyle>normal</FontStyle>
+            <FontWeight>400</FontWeight>
+            <FontStretch>normal</FontStretch>
+          </Infos>
+        </Dependency>
+        <Dependency URI="player://data/Contents/SEGOEUII.iff" Length="529712" LastModificationDate="2019-03-19T04:44:11.422647Z">
+          <Infos>
+            <FontStyle>italic</FontStyle>
+            <FontWeight>400</FontWeight>
+            <FontStretch>normal</FontStretch>
+          </Infos>
+        </Dependency>
+        <Dependency URI="player://data/Contents/SEGUISB.iff" Length="971080" LastModificationDate="2019-03-19T04:44:11.4382732Z">
+          <Infos>
+            <FontStyle>normal</FontStyle>
+            <FontWeight>600</FontWeight>
+            <FontStretch>normal</FontStretch>
+          </Infos>
+        </Dependency>
+        <Dependency URI="player://data/Contents/SEGUISBI.iff" Length="457892" LastModificationDate="2019-03-19T04:44:18.6107231Z">
+          <Infos>
+            <FontStyle>italic</FontStyle>
+            <FontWeight>600</FontWeight>
+            <FontStretch>normal</FontStretch>
+          </Infos>
+        </Dependency>
+        <Dependency URI="player://data/Contents/SEGOEUIB.iff" Length="951724" LastModificationDate="2019-03-19T04:44:11.422647Z">
+          <Infos>
+            <FontStyle>normal</FontStyle>
+            <FontWeight>700</FontWeight>
+            <FontStretch>normal</FontStretch>
+          </Infos>
+        </Dependency>
+        <Dependency URI="player://data/Contents/SEGOEUIZ.iff" Length="541468" LastModificationDate="2019-03-19T04:44:11.422647Z">
+          <Infos>
+            <FontStyle>italic</FontStyle>
+            <FontWeight>700</FontWeight>
+            <FontStretch>normal</FontStretch>
+          </Infos>
+        </Dependency>
+        <Dependency URI="player://data/Contents/SEGUIBL.iff" Length="324260" LastModificationDate="2019-03-19T04:44:11.4538994Z">
+          <Infos>
+            <FontStyle>normal</FontStyle>
+            <FontWeight>900</FontWeight>
+            <FontStretch>normal</FontStretch>
+          </Infos>
+        </Dependency>
+        <Dependency URI="player://data/Contents/SEGUIBLI.iff" Length="356008" LastModificationDate="2019-03-19T04:44:18.6263489Z">
+          <Infos>
+            <FontStyle>italic</FontStyle>
+            <FontWeight>900</FontWeight>
+            <FontStretch>normal</FontStretch>
+          </Infos>
+        </Dependency>
+      </Dependencies>
+    </Resource>
+    <Resource Key="6b7e7e70-0a3b-4c86-a462-e9aff2123e3b" Type="snapshot" Length="7786" LastModificationDate="2019-08-22T19:53:55.8110803Z" Archive="Snapshots.zip" DefaultValue="player://data/Snapshots/33d0780f.png" />
+    <Resource Key="9ac1cb27-1789-47a1-b380-719f62cfa9f6" Type="snapshot" Length="7786" LastModificationDate="2019-08-22T19:53:55.8110803Z" Archive="Snapshots.zip" DefaultValue="player://data/Snapshots/default.png" />
+  </Resources>
+  <Sequence>
+    <SpaceRef Space="player://visuals/UDP-Sender-HEXTest/Scene%201/" />
+  </Sequence>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <DigestValue>ocJtks3BXP0/T+SioH9TcxpYPxs=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>kRLQ6m/dgo+525kczRQ7MbWLXPyigpWHxtzETp5s5Fln9VOEa8t5YGb9SCp9s7S1QwCiF4UF44NP9OHEazoQJWNEqAQY1MVjm2GA+f9JHFrOVYvu3IZSHNaSH5DqDqqgobAYQCYkqQxJVUcgqAuK3x2cMcNMUtCStSki0fXkRdqfF2ToXiAZkiZG6zU9GCGp9Cn+jc9TjyMJkEYRYXBZLNjensKtNvQEsxqVMGQNCwKN+yAX+/pVP4sNKFUDglDIKn9zvh8j7C5M4djtF12ck58rPWSsoTPVB528Lxkv1cJp69DwEQya8JZHUlxgOoM86l6fcaHGQxOpDkQenRthGQ==</SignatureValue>
+    <Object Id="private" MimeType="text/xml" Encoding="utf-8">
+      <SignatureData xmlns="">
+        <EditonLevel>ENTERPRISE</EditonLevel>
+        <HostName>SCIRPE</HostName>
+        <Data><![CDATA[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]]></Data>
+        <Crypto>
+          <IV><![CDATA[EuIv1ZO6fdlkgDeGoCtSef/yYMtTjKM0tHd5diaB0ITFRFyagAUQxT2g0fZo6pq87VM1OhNDZeIevB6+98jBXI0z7xjOGepgnEnIMxkFK+uTyPpp05wMrlXR5K4E366BLXBkdXAXF3+oc+m+dZMFylroY2KQkbksjZC94Oawyzr081xleyGVdvaoVTWMqUtyy0X6HJAgTHiZIotRUTgugGu+FOodDHkDwe/tNRrNRm91YHrB/u7dxTz7PfFnOo1Y1xS9kXzz8Ag9OWfGRq3TjPLwDiYIV6ySB8rv4cnpHmBce25xDVBMLrZZEvCwCFD5ZBCBZZBkxSQUBw1dvbGfvA==]]></IV>
+          <Key><![CDATA[l9ZfZ0RT0AqIZM1IB1uhCEn3BrlhtITX1ZrwQY3oRIfO4AcWHc6mkBXMxzJKti+QErP0665KK0tipqOt7YJUrd3tVpchZNmosthzgzlOP7mNG7dittDnIEZoInMtjckkkIZJp6Hoynje7mgypoD6EVI1Oil7huQeR+eU9VPs0G9+xspj3UjVWknvfb+DPjSH3xo+nIDYiEMC4xvupWCXMlhD+Xy1X9P7VaTe3Qy5yw65NBkM18qN8XufF26cC/AQ6SQMPRoHEbzYVarmGLquuMdmnWXYaLAvjikq+MKgzme3Taqm8IUVPhXCDJ/YXk03fwrT/cLCxGR0U/imXrACEQ==]]></Key>
+        </Crypto>
+      </SignatureData>
+    </Object>
+  </Signature>
+</Presentation>

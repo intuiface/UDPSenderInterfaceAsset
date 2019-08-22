@@ -1,0 +1,78 @@
+{
+  "kind": "discovery#restDescription",
+  "discoveryVersion": "v1",
+  "id": "UDPSender",
+  "name": "UDPSender",
+  "version": "1.0",
+  "protocol": "dll",
+  "baseUrl": null,
+  "basePath": "UDPSender",
+  "auth": {},
+  "dependencies": [
+    "UDPSender.dll"
+  ],
+  "schemas": {
+    "UDPSender": {
+      "id": "UDPSender",
+      "type": "object",
+      "properties": {
+        "Address": {
+          "title": "Address",
+          "type": "string",
+          "description": "Address"
+        },
+        "Port": {
+          "title": "Port",
+          "type": "integer",
+          "description": "Port"
+        }
+      }
+    }
+  },
+  "resources": {
+    "UDPSender": {
+      "title": "UDPSender",
+      "isInterfaceAsset": true,
+        "methods": {
+            "SendMessage": {
+                "title": "Send message",
+                "description": "Send a message as a string",
+                "response": {
+                    "type": "null"
+                },
+                "parameters": {
+                    "strMsg_": {
+                        "title": "Message",
+                        "type": "string",
+                        "required": true
+                    }
+                }
+            },
+            "SendHexMessage": {
+                "title": "Send Hexadecimal message",
+                "description": "Send a hexadecimal message",
+                "response": {
+                    "type": "null"
+                },
+                "parameters": {
+                    "strMsg_": {
+                        "title": "HEX Message",
+                        "type": "string",
+                        "required": true
+                    }
+                }
+            }
+        }
+    }
+  },
+  "signature": {
+    "hash": "2jmj7l5rSw0yVb/vlWAYkK/YBwk=",
+    "signatureData": {
+      "editionLevel": "ENTERPRISE",
+      "hostname": "SCIRPE",
+      "data": "bdMhkWUqNW9dRCRL0weaD7YMMIbT8xM46eYskDcnHHfsp52c6GGNW1vapA4LHUrHGyPMsZoWmyfZ02tzt++rbvkO8U+vIUulm6+vsO6WG/ouV7XxlpduCnJ4YyNWafVsvkrccMyG2VSfDxpm8x39r3wmKy6MUEJyEx/ojDV0P6RsTceA1woC5uYoQIBLdFG7+ytCiFeic7lwaOODk+qyBzhn7oe4yd3zVdd+NosUbv/7NMFneaq7cx0VW33R+8TgAtLGsSp73QmYglmbikNonyrPB8WZgaNWkghH8je5rWCgaHDrNUDZFYyjn9MSeOu8xPRLfB3ttl2c/qU1Mog7uw2EoRsb8A4aB+t9CY8rtPTrO+Y3szL5RVIaDm77jx3Bi6/7Vi+H79tf4pZuH0h8uetYu3WyRw1eHxq8pb3KycX+H0SOiPWIC6gjLheFBc4wun5obu/aTOmmNQruIipQyb5K9jWNYpq+DKYVhOmUE2M0RlQmnDxJjxo6tBCt0cX2vQT4CpVmUWhwwIys1LdLoOUfXcr3/PXaQc/q3RD9cKvaamr4/5E/qhXEadO3vLgvsHKEYC/OeinoTrkzqb9nc6bWWILmvPN3vlfMB9pkPcuiZ2SDQGge5PTVVhSrzYqC/f6E9NTr7huRvlTIjcpRjjnY/tHJDkO/Dyid5nUiuUTaXyGEc0OoCQJPFsw9Vp/tC9BgF7DNB0Qw+vty55mj1Tz4Cp7NHvH3F8XRckuiJQivIIi5q5hUzac9FuTyjHkxqVbf02slZh6wQKGpn24FScMqkMAB8bZc1c/HvVo4XilB8qOLurqK3I30TYD1NfDbFha6kRB6xm+M8x/309rRuJ09VuCuIImekVUby57aOtNdLtZIdrasSAacvUjVPS4CmvJ6iOR6WBTKMxlZjdjTVmehRdLfUW1bv9+zvLTH4OaWt9WmUGVQNDAwd2t1tHTBvbVO2ZUWYWkNrta4EnXJTLNKxXyew5/vSA6+UPeDAdosgwgWTxfgOziFMdGnrfl6aK005Fb3BnwxUa+NpwZUmsqy8U7P64bHk0ASTSawZgoIjSoKEIRBDxLg+uRnpgcgliCYr+89eqBMuM8UCQzjmnptSE8QP9nvG+YMwhHKiFNQfi8q76BqaUwynydokr+C9YcbHDvTFPqQMnSgeq/vFrYRD4EgdEUyYfWdKoORdW5Juz514hZfC8yVUWbF+AeP0U1c+uPPp8p/nxzYpdzNk3I4m6o5/A3K3fSzdwyy9CFSvVQN6BwmYrungX06kLLLqZ/oZnKLxsgw0MsNDIAHK7WnC/8AsiYIIojj+Hm6Mp8WNzzBjqVGErbyevEghqLZvPySfDPz2jl11w4Z/XJO/cip1Zvd/bjUxdRHpQGwnbFn9TlwCfuekd2PmtyEPWUytUyMiTFSeDvRvg4IhJ7/W27UQp28aO5Saw6LG5K+SrNZRuCYpycpN1RLJ5AHDsKLSh1LwlzI12rWcno/n1mkGRZheXrglBvGuz8aoPshZ/Xtr1STWdt++U/N/WMeIy3n7+HPGWZnGafeSf6udzLcGBFgvMa0rHIHZT9IAMxRCvPG+lfMJcNPxJXy91nsag5vi0dKdXh18ZbiQ3zE2uxorgHDrydpqa72RWWn9VSCeXKdQyNkw7BVELUMZrgOS4K2nJkke/Bj7F/czqWJm6jIwybUIKeAIoh8keeT2CpPtUXHydyWJeFlXgk/E24RcOMbWZwrwvTM2RS3dwFEYK/YyGlmSZuXa9X/2s3rzW623m7dShcABqWqsNf+MH010kTfwbB+FTCdER/+ogW2FcxXM/s0T/xTBxSnkypKEekPZOmtbMAxmH70o5rPb5OiE1VO",
+      "key": "pfYeD8maXSfc9DfziGWHBL8LsHHr32GUB9+CGDBwLDjHxKtSkmC2GLe9g5sNTlU99KwFar4QQAN0nF2C6Hb2ItEiqNjK7wSziQVkBXqEdvsrv20zjQSc/lC5qVHp79W4cTAM3zpN47H997BnXDUfkqg6aradhnLPFLZax5ry3FiUMdjWCPtBTtW7UhMrnY86zpOTyXqpTrdgoaNLywGt5f8b7oLsY5Y8+Eed1e4Fi84r9uE26kcQhBnYUvW0VCqu/odzxaSzOYtZOvFICqkdzMYFmm3EYhxSqXj4Y38CWwlmVgMMuz0SzcmiZh0PZkzFaXpimkgnh5arZV1TpvhvRQ==",
+      "iv": "AO+1HPDyghnFns8NwIB6NsXMtkFsjTfJ3o+gQ8TiNEKCZTajs/SdKJKq5NK4Ur+zUeLLaodBgHJrhOD9Fs44H07je5g8NY5ns51wBnBT/PzVYwON0cWtcqsB1sh3rvsa/3XTfvDGQou9hortF9lkvo//eWSRcOsJlZG1rYDuWkLEFU/Nl/jA9/S0BtmH00s5m8enOkDsnHCf+XWDMyk7p04Q9ZH1oy+cw8sck82NzrPdLx9q0j4T5NXmRxuXY0w98FwFk2/BLfnfXBaODHI9nedv+GjwS9UJZUvQuxHflQPA0zF1ATSw/ZtE3Xj+QJ6BXcLEGBTQS5WVn25j6I04hw=="
+    }
+  }
+}
